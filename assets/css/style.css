@@ -24,7 +24,7 @@
 }
 
 body {
-  background-color: var(--headings-color);
+  background-color: var(--primary-color);
   width: 100vw;
   height: 100vh;
   font-family: var(--font-poppins);
