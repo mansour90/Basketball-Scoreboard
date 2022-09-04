@@ -1,0 +1,141 @@
+:root {
+  --primary-color:#1B244A;
+  --dark-color:#080001;
+  --score-color:#F94F6D;
+  --headings-color: #eee;
+  --border-color: #7A89B5;
+  --button-text:#7A89B5; 
+
+  --font-timer: timer;
+  --font-poppins: poppins;
+}
+
+/* Import Font Face */
+@font-face {
+  src: url('../fonts/CursedTimerUlil-Aznm.ttf');
+  font-family: timer;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font-poppins);
+  padding: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  gap:10px;
+  align-items: center;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+h3 {
+  color: var(--headings-color);
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 10px 0;
+  font-size: 2rem;
+}
+
+#score-home,#score-guest {
+  background-color: var(--dark-color);
+  width: 150px;
+  height:100px;
+  border-radius:5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0.85%;
+  padding-top: 16px;
+  margin-bottom: 10px;
+  
+}
+.score{
+  font-family: var(--font-timer);
+  font-size: 90px;
+  color:var(--score-color);
+}
+
+.score-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--button-text);
+  border-radius: 5px;
+  padding: 10px;
+  font-family: var(--font-timer);
+  cursor: pointer;
+  margin-inline: 2px;
+}
+
+#reset {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 7px 20px;
+  background-color: transparent;
+  border: 2px solid var(--score-color);
+  border-radius: 5px;
+  color: var(--score-color);
+  font-family: var(--font-timer);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#msg {
+  position: absolute;
+  bottom: 10px; 
+  width: 90%;
+  left: 0;
+  right:0;
+  font-size: 1.2rem;
+  font-family: var(--font-poppins);
+  font-weight: 300;
+  color: var(--score-color);
+  letter-spacing: 2px;
+  text-align: center;
+  animation: fromtop 1s;
+  background-color: var(--dark-color);
+  margin: auto;
+  padding: 10px;
+  height: 50px;
+  display: none;
+}
+.close {
+  position: absolute;
+  right: 10px;
+  color: var(--headings-color);
+  font-size: 15px;
+  cursor: pointer;
+}
+@keyframes fromtop {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

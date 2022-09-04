@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link CSS File -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Basketball Scoreboard</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="home-box">
+        <h3>HOME</h3>
+        <div id="score-home">
+          <p class="score" id="home"></p>
+        </div>
+        <div class="score--buttons">
+          <button onclick="add1Home()" class="btn">+1</button>
+          <button onclick="add2Home()" class="btn">+2</button>
+          <button onclick="add3Home()" class="btn">+3</button>
+        </div>
+      </div>
+      
+      <div class="guest-box">
+        <h3>GUEST</h3>
+        <div id="score-guest">
+        <p class="score" id="guest"></p>
+        </div>
+        <div class="score--buttons">
+          <button onclick="add1Guest()" class="btn">+1</button>
+          <button onclick="add2Guest()" class="btn">+2</button>
+          <button onclick="add3Guest()" class="btn">+3</button>
+        </div>
+      </div>
+      <button onclick="reset()" id="reset">Reset</button>
+      <p id="msg"><span onclick="closePopUp()" class="close" id="close">x</span></p>
+      
+    </div>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
