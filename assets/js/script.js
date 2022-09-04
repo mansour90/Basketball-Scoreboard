@@ -13,30 +13,42 @@ guest.textContent = countGuest;
 function add1Home() {
   let result = countHome += 1;
   home.textContent = result;
+  window.localStorage.setItem("score", home.textContent)
+}
+
+if(window.localStorage.getItem("score")) {
+home.textContent = window.localStorage.getItem("score")
+}else {
+  console.log("No")
 }
 
 function add2Home() {
   let result = countHome += 2;
   home.textContent = result;
+  window.localStorage.setItem("score", home.textContent)
 }
 
 function add3Home() {
   let result = countHome += 3;
   home.textContent = result;
+  window.localStorage.setItem("score", home.textContent)
 }
 function add1Guest() {
   let result = countGuest += 1;
   guest.textContent = result;
+  window.localStorage.setItem("score", home.textContent)
 }
 
 function add2Guest() {
   let result = countGuest += 2;
   guest.textContent = result;
+  window.localStorage.setItem("score", home.textContent)
 }
 
 function add3Guest() {
   let result = countGuest += 3;
   guest.textContent = result;
+  window.localStorage.setItem("score", home.textContent)
 }
 
 function reset() {
@@ -46,16 +58,8 @@ function reset() {
   countGuest = 0;
 }
 
-if(countHome.innerHTML >= 10) {
-msg.textContent = "Team Home wins the Game!"
-msg.style.display= "block"
-console.log("home")
-}
 
-function closePopUp() {
-  msg.style.display = "none";
-  console.log("heui")
-}
-console.log(countHome)
-console.log(countHome)
-
+// function closePopUp() {
+//   msg.style.display = "none";
+//   console.log("heui")
+// }
