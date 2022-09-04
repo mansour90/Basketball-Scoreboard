@@ -59,4 +59,3 @@ function closePopUp() {
 console.log(countHome)
 console.log(countHome)
 
-localeStorage.setItem("homeScore", countHome)
